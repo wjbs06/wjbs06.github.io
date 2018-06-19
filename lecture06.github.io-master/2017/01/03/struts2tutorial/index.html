@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        struts2tutorial - BIT교육센터 | Class06&#39;s Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <h1> BIT교육센터 | Class06&#39;s Blog </h1>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>수업자료</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#struts2-Tutorial"><span class="toc-text">struts2 Tutorial</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#기본-문법"><span class="toc-text">기본 문법</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#web-xml"><span class="toc-text">web.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#struts-xml"><span class="toc-text">[struts.xml]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#struts-xml-1"><span class="toc-text">struts.xml</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#고급-문법"><span class="toc-text">고급 문법</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Interceptor"><span class="toc-text">Interceptor</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#extends-AbstractInterceptor"><span class="toc-text">extends AbstractInterceptor { }</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#implements-Interceptor"><span class="toc-text">implements Interceptor { }</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#extends-MethodFilterInterceptor"><span class="toc-text">extends MethodFilterInterceptor { }</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#implements-ServletRequestAware"><span class="toc-text">implements ServletRequestAware {}</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#스트럿츠2에서-세션-받아오기"><span class="toc-text">스트럿츠2에서 세션 받아오기</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#세션에-내용을-입력할-경우"><span class="toc-text">세션에 내용을 입력할 경우</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#현재-무슨-세션이-있는지-알고자-할-경우"><span class="toc-text">현재 무슨 세션이 있는지 알고자 할 경우</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#키-값을-알고-있는-경우"><span class="toc-text">키 값을 알고 있는 경우</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#키-값을-모르고-있는-경우"><span class="toc-text">키 값을 모르고 있는 경우</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#세션-삭제하기"><span class="toc-text">세션 삭제하기</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> BIT교육센터 | Class06&#39;s Blog </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        struts2tutorial
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2017-01-03 10:30:11</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#struts2" title="struts2">struts2</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="struts2-Tutorial"><a href="#struts2-Tutorial" class="headerlink" title="struts2 Tutorial"></a>struts2 Tutorial</h2><blockquote>
+<p><a href="https://struts.apache.org/" title="https://struts.apache.org/" target="_blank" rel="noopener">https://struts.apache.org/</a></p>
+<p><a href="https://struts.apache.org/getting-started/" title="https://struts.apache.org/getting-started/" target="_blank" rel="noopener">https://struts.apache.org/getting-started/</a></p>
+</blockquote>
+<h3 id="기본-문법"><a href="#기본-문법" class="headerlink" title="기본 문법"></a>기본 문법</h3><h4 id="web-xml"><a href="#web-xml" class="headerlink" title="web.xml"></a>web.xml</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;display-name&gt;Struts2&lt;/display-name&gt;</span><br><span class="line"></span><br><span class="line">&lt;filter&gt;</span><br><span class="line">&lt;filter-name&gt;struts2&lt;/filter-name&gt;</span><br><span class="line">&lt;filter-class&gt;org.apache.struts2.dispatcher.FilterDispatcher&lt;/filter-class&gt;</span><br><span class="line">&lt;/filter&gt;</span><br><span class="line"></span><br><span class="line">&lt;filter-mapping&gt;</span><br><span class="line">&lt;filter-name&gt;struts2&lt;/filter-name&gt;</span><br><span class="line">&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">&lt;/filter-mapping&gt;</span><br></pre></td></tr></table></figure>
+</code></pre><h4 id="struts-xml"><a href="#struts-xml" class="headerlink" title="[struts.xml]"></a>[struts.xml]</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line"></span><br><span class="line">&lt;!DOCTYPE struts PUBLIC</span><br><span class="line">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span><br><span class="line">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;struts&gt;</span><br><span class="line">&lt;/struts&gt;</span><br><span class="line">#### struts.properties ####</span><br><span class="line">#인코딩 문자체계를 설정한다.</span><br><span class="line">struts.i18n.encoding=euc-kr (디폴트:UTF-8)</span><br><span class="line"></span><br><span class="line">#액션의 확장자를 지정한다. 쉼표로 여러 개를 지정할 수 있다.</span><br><span class="line">struts.action.extension=action (디폴트:action)</span><br><span class="line"></span><br><span class="line">#URL에서 액션 메소드를 지정할 수 있도록 설정한다.</span><br><span class="line">#&apos;액션!메소드.action&apos; 또는 &apos;액션.action?method=메소드&apos;</span><br><span class="line">struts.enable.DynamicMethodInvocation=false (디폴트:true)</span><br><span class="line"></span><br><span class="line">#개발 타임시 설정한다. 다음 두 가지를 포함한다.</span><br><span class="line">#struts.i18n.reload=true</span><br><span class="line">#struts.configuration.xml.reload=true</span><br><span class="line">struts.devMode=true (디폴트:false)</span><br></pre></td></tr></table></figure>
+</code></pre><h4 id="struts-xml-1"><a href="#struts-xml-1" class="headerlink" title="struts.xml"></a>struts.xml</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;struts&gt;</span><br><span class="line">&lt;constant name=&quot;struts.i18n.encoding&quot; value=&quot;euc-kr&quot;/&gt;</span><br><span class="line">&lt;constant name=&quot;struts.action.extension&quot; value=&quot;action&quot;/&gt;</span><br><span class="line">&lt;constant name=&quot;struts.enable.DynamicMethodInvocation&quot; value=&quot;true&quot; /&gt;</span><br><span class="line">&lt;constant name=&quot;struts.devMode&quot; value=&quot;true&quot; /&gt;</span><br><span class="line">&lt;/struts&gt;</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="고급-문법"><a href="#고급-문법" class="headerlink" title="고급 문법"></a>고급 문법</h3><h4 id="Interceptor"><a href="#Interceptor" class="headerlink" title="Interceptor"></a>Interceptor</h4><h5 id="extends-AbstractInterceptor"><a href="#extends-AbstractInterceptor" class="headerlink" title="extends AbstractInterceptor { }"></a>extends AbstractInterceptor { }</h5><p>​    <code>com.opensymphony.xwork2.interceptor.AbstractInterceptor</code></p>
+<pre><code>intercept() 메소드 오버라이드 (필수)
+</code></pre><h5 id="implements-Interceptor"><a href="#implements-Interceptor" class="headerlink" title="implements Interceptor { }"></a>implements Interceptor { }</h5><p>​    <code>public void init() : 웹 애플리케이션이 deploy 될 때 한 번 실행</code></p>
+<pre><code>public String intercept(ActionInvocation invocation) : 요청시 마다 실행
+
+public void destroy() : (실행 되지 않음)
+</code></pre><h5 id="extends-MethodFilterInterceptor"><a href="#extends-MethodFilterInterceptor" class="headerlink" title="extends MethodFilterInterceptor { }"></a>extends MethodFilterInterceptor { }</h5><p>​    <code>com.opensymphony.xwork2.interceptor.MethodFilterInterceptor</code></p>
+<pre><code>인터셉터 &lt;적용 제외&gt; 또는 적용 메소드를 지정할 수 있
+doIntercept() 메소드 오버라이드 (필수)
+</code></pre><h5 id="implements-ServletRequestAware"><a href="#implements-ServletRequestAware" class="headerlink" title="implements ServletRequestAware {}"></a>implements ServletRequestAware {}</h5><p>​    <code>//ServetRequestAware 구현
+    private HttpServletRequest request;
+    public void setServletRequest(HttpServletRequest request) {
+    this.request = request;</code></p>
+<h4 id="스트럿츠2에서-세션-받아오기"><a href="#스트럿츠2에서-세션-받아오기" class="headerlink" title="스트럿츠2에서 세션 받아오기"></a>스트럿츠2에서 세션 받아오기</h4><p>​    <code>스트럿츠2에서는 세션 데이터을 맵으로 관리하기 때문에 받아올때에도 다음과 같이 맵객체에 담아준다.
+​    ActionContext con = ActionContext.getContext();
+    Map session = con.getSession();</code></p>
+<h4 id="세션에-내용을-입력할-경우"><a href="#세션에-내용을-입력할-경우" class="headerlink" title="세션에 내용을 입력할 경우"></a>세션에 내용을 입력할 경우</h4><p>​    <code>map에 데이터를 넣는 것과 동일하다. 키값으로는 object를 사용해도 된다. session.put( “키값” , 내용 );</code></p>
+<h4 id="현재-무슨-세션이-있는지-알고자-할-경우"><a href="#현재-무슨-세션이-있는지-알고자-할-경우" class="headerlink" title="현재 무슨 세션이 있는지 알고자 할 경우"></a>현재 무슨 세션이 있는지 알고자 할 경우</h4><h5 id="키-값을-알고-있는-경우"><a href="#키-값을-알고-있는-경우" class="headerlink" title="키 값을 알고 있는 경우"></a>키 값을 알고 있는 경우</h5><p>​    <code>key값을 알고 있을경우에는 key값으로 바로 가져오면 된다. Object value = session.get(“키값”);</code></p>
+<h5 id="키-값을-모르고-있는-경우"><a href="#키-값을-모르고-있는-경우" class="headerlink" title="키 값을 모르고 있는 경우"></a>키 값을 모르고 있는 경우</h5><p>​    <code>key값을 모르는 경우에는 세션에 존재하는 모든 키값을 가져와서 해당 데이터를 몽땅 가져온다.
+​    Set set = session.keySet();
+    Iterator ite = set.iterator();
+    while(ite.hasNext()) { String key = (String) ite.next(); Object value = session.get(key); }</code></p>
+<h4 id="세션-삭제하기"><a href="#세션-삭제하기" class="headerlink" title="세션 삭제하기"></a>세션 삭제하기</h4><p>​    <code>session에서 해당 키값에 해당하는 데이터를 제거합니다.
+    session.remove(“키값”);</code></p>
+
+        
+        <div id="comment-container">
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/lecture06">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</html>
